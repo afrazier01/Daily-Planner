@@ -2,14 +2,110 @@ var saveButtons = $('.saveBtn')
 var today = dayjs();
 $('#currentDay').text(today.format('dddd, MMMM D, YYYY h:mm A'))
 
-$(function checkTime () {
-  time = dayjs().format('h')
-  console.log(time)
-  // if time < (data int?):
-  //  set attribute of class hX
-  // else: 
-  //  set attribute
+function setBackgroundColor (time) {
+  //present conditions
+  if (time===9) {
+    $('#hour-9').attr('style','background-color: #ff6961;')
+  } 
+  if (time===10) {
+    $('#hour-10').attr('style','background-color: #ff6961;')
+  } 
+  if (time===11) {
+    $('#hour-11').attr('style','background-color: #ff6961;')
+  } 
+  if (time===12) {
+    $('#hour-12').attr('style','background-color: #ff6961;')
+  } 
+  if (time===13) {
+    $('#hour-1').attr('style','background-color: #ff6961;')
+  } 
+  if (time===14) {
+    $('#hour-2').attr('style','background-color: #ff6961;')
+  } 
+  if (time===15) {
+    $('#hour-3').attr('style','background-color: #ff6961;')
+  } 
+  if (time===16) {
+    $('#hour-4').attr('style','background-color: #ff6961;')
+  } 
+  if (time===17) {
+    $('#hour-5').attr('style','background-color: #ff6961;')
+  }
 
+  //past conditions
+  if (time>=10) {
+    $('#hour-9').attr('style','background-color: #d3d3d3;')
+  } 
+  if (time>=11) {
+    $('#hour-9').attr('style','background-color: #d3d3d3;')
+    $('#hour-10').attr('style','background-color: #d3d3d3;')
+  } 
+  if (time>=12) {
+    $('#hour-9').attr('style','background-color: #d3d3d3;')
+    $('#hour-10').attr('style','background-color: #d3d3d3;')
+    $('#hour-11').attr('style','background-color: #d3d3d3;')
+  } 
+  if (time>=13) {
+    $('#hour-9').attr('style','background-color: #d3d3d3;')
+    $('#hour-10').attr('style','background-color: #d3d3d3;')
+    $('#hour-11').attr('style','background-color: #d3d3d3;')
+    $('#hour-12').attr('style','background-color: #d3d3d3;')
+  }
+  if (time>=14) {
+    $('#hour-9').attr('style','background-color: #d3d3d3;')
+    $('#hour-10').attr('style','background-color: #d3d3d3;')
+    $('#hour-11').attr('style','background-color: #d3d3d3;')
+    $('#hour-12').attr('style','background-color: #d3d3d3;')
+    $('#hour-1').attr('style','background-color: #d3d3d3;')
+  }
+  if (time>=15) {
+    $('#hour-9').attr('style','background-color: #d3d3d3;')
+    $('#hour-10').attr('style','background-color: #d3d3d3;')
+    $('#hour-11').attr('style','background-color: #d3d3d3;')
+    $('#hour-12').attr('style','background-color: #d3d3d3;')
+    $('#hour-1').attr('style','background-color: #d3d3d3;')
+    $('#hour-2').attr('style','background-color: #d3d3d3;')
+  } 
+  if (time>=16) {
+    $('#hour-9').attr('style','background-color: #d3d3d3;')
+    $('#hour-10').attr('style','background-color: #d3d3d3;')
+    $('#hour-11').attr('style','background-color: #d3d3d3;')
+    $('#hour-12').attr('style','background-color: #d3d3d3;')
+    $('#hour-1').attr('style','background-color: #d3d3d3;')
+    $('#hour-2').attr('style','background-color: #d3d3d3;')
+    $('#hour-3').attr('style','background-color: #d3d3d3;')
+  } 
+  if (time>=17) {
+    $('#hour-9').attr('style','background-color: #d3d3d3;')
+    $('#hour-10').attr('style','background-color: #d3d3d3;')
+    $('#hour-11').attr('style','background-color: #d3d3d3;')
+    $('#hour-12').attr('style','background-color: #d3d3d3;')
+    $('#hour-1').attr('style','background-color: #d3d3d3;')
+    $('#hour-2').attr('style','background-color: #d3d3d3;')
+    $('#hour-3').attr('style','background-color: #d3d3d3;')
+    $('#hour-4').attr('style','background-color: #d3d3d3;')
+  } 
+  if (time>18) {
+    $('#hour-9').attr('style','background-color: #d3d3d3;')
+    $('#hour-10').attr('style','background-color: #d3d3d3;')
+    $('#hour-11').attr('style','background-color: #d3d3d3;')
+    $('#hour-12').attr('style','background-color: #d3d3d3;')
+    $('#hour-1').attr('style','background-color: #d3d3d3;')
+    $('#hour-2').attr('style','background-color: #d3d3d3;')
+    $('#hour-3').attr('style','background-color: #d3d3d3;')
+    $('#hour-4').attr('style','background-color: #d3d3d3;')
+    $('#hour-5').attr('style','background-color: #d3d3d3;')
+  } 
+}
+
+$(function checkTime () {
+  time = dayjs().format('H')
+  console.log('Time: ',time)
+  time = parseInt(time)
+  //set default background to green
+  $('.time-block').attr('style','background-color: #77dd77;')
+
+  setBackgroundColor(time)
 })
 
 saveButtons.on('click', function () {
