@@ -2,6 +2,15 @@ var saveButtons = $('.saveBtn')
 var today = dayjs();
 $('#currentDay').text(today.format('dddd, MMMM D, YYYY h:mm A'))
 
+$(function checkTime () {
+  time = dayjs().format('h')
+  console.log(time)
+  // if time < (data int?):
+  //  set attribute of class hX
+  // else: 
+  //  set attribute
+
+})
 
 saveButtons.on('click', function () {
   var userEvent1 = $('.h9').val()
