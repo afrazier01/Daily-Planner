@@ -4,20 +4,49 @@ $('#currentDay').text(today.format('dddd, MMMM D, YYYY h:mm A'))
 
 
 saveButtons.on('click', function () {
-  console.log('FTRE')
+  var userEvent1 = $('.h9').val()
+  var userEvent2 = $('.h10').val()
+  var userEvent3 = $('.h11').val()
+  var userEvent4 = $('.h12').val()
+  var userEvent5 = $('.h1').val()
+  var userEvent6 = $('.h2').val()
+  var userEvent7 = $('.h3').val()
+  var userEvent8 = $('.h4').val()
+  var userEvent9 = $('.h5').val()
 
-  var userEvent = $('.description').val()
-  console.log(userEvent)
-
-
-  localStorage.setItem('event',JSON.stringify(userEvent))
+ 
+  localStorage.setItem('event1',JSON.stringify(userEvent1))
+  localStorage.setItem('event2',JSON.stringify(userEvent2))
+  localStorage.setItem('event3',JSON.stringify(userEvent3))
+  localStorage.setItem('event4',JSON.stringify(userEvent4))
+  localStorage.setItem('event5',JSON.stringify(userEvent5))
+  localStorage.setItem('event6',JSON.stringify(userEvent6))
+  localStorage.setItem('event7',JSON.stringify(userEvent7))
+  localStorage.setItem('event8',JSON.stringify(userEvent8))
+  localStorage.setItem('event9',JSON.stringify(userEvent9))
 })
 
 $(function renderUserEvents () {
-  var userEvents = $(JSON.parse(localStorage.getItem('event')))
-
+  var userEvent1 = $(JSON.parse(localStorage.getItem('event1')))
+  var userEvent2 = $(JSON.parse(localStorage.getItem('event2')))
+  var userEvent3 = $(JSON.parse(localStorage.getItem('event3')))
+  var userEvent4 = $(JSON.parse(localStorage.getItem('event4')))
+  var userEvent5 = $(JSON.parse(localStorage.getItem('event5')))
+  var userEvent6 = $(JSON.parse(localStorage.getItem('event6')))
+  var userEvent7 = $(JSON.parse(localStorage.getItem('event7')))
+  var userEvent8 = $(JSON.parse(localStorage.getItem('event8')))
+  var userEvent9 = $(JSON.parse(localStorage.getItem('event9')))
   
-  $('.description').text(JSON.parse(localStorage.getItem('event')))
+  
+  $('.h9').text(JSON.parse(localStorage.getItem('event1')))
+  $('.h10').text(JSON.parse(localStorage.getItem('event2')))
+  $('.h11').text(JSON.parse(localStorage.getItem('event3')))
+  $('.h12').text(JSON.parse(localStorage.getItem('event4')))
+  $('.h1').text(JSON.parse(localStorage.getItem('event5')))
+  $('.h2').text(JSON.parse(localStorage.getItem('event6')))
+  $('.h3').text(JSON.parse(localStorage.getItem('event7')))
+  $('.h4').text(JSON.parse(localStorage.getItem('event8')))
+  $('.h5').text(JSON.parse(localStorage.getItem('event9')))
 })
 //Class Notes
 // Wrap all code that interacts with the DOM in a call to jQuery to ensure that
