@@ -8,7 +8,7 @@ In this project, I learned how to practice and implement:
 - Third-Party APIs: JQuery and DayJS libraries. 
 - Local Storage: to store data in the user's browser.
 - JSON: to convert object data to and from local storage.
-- JQuery: to simplif y DOM manipulation and event handling.
+- JQuery: to simplify DOM manipulation and event handling.
 - Events: utilizing .on('Click') to handle click events.
 - DayJS: to make Date object easier to parse, validate, and display.
 
